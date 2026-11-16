@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar — Marola</title>
+    <meta name="description" content="Entrar na Marola, a plataforma de fluxo de caixa Pix para micro e pequenas empresas.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#0E2A47">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+    <div class="grid min-h-screen lg:grid-cols-[1fr_1.1fr]">
+
+        <!-- Painel de marca (desktop) -->
+        <aside class="wave-bg relative hidden flex-col justify-between bg-ink-800 p-12 text-sand-100 lg:flex">
+            <a href="index.html" aria-label="Marola — página inicial"><img src="images/marola-logo-claro.svg" alt="Marola" width="156" height="40" class="h-10 w-auto"></a>
+            <div>
+                <p class="font-display text-5xl font-extrabold leading-[1.05]">Bem-vindo de volta ao seu caixa.</p>
+                <p class="mt-5 max-w-sm text-lg leading-relaxed text-sand-200">Acompanhe cada Pix que entrou e veja como está o fluxo de caixa do seu negócio.</p>
+            </div>
+            <p class="text-sm text-sand-300">Protótipo de demonstração.</p>
+        </aside>
+
+        <!-- Formulário -->
+        <main id="conteudo" class="flex flex-col bg-sand-100">
+            <div class="flex items-center justify-between px-5 py-5 sm:px-8">
+                <a href="index.html" class="lg:invisible" aria-label="Marola — página inicial"><img src="images/marola-logo.svg" alt="Marola" width="140" height="36" class="h-9 w-auto"></a>
+                <a href="index.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-800 hover:underline underline-offset-4">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+                    Voltar para o site
+                </a>
+            </div>
+            <div class="flex flex-1 items-center justify-center px-5 pb-14 pt-4 sm:px-8">
+                <div class="w-full max-w-md">
+                    <h1 class="text-4xl font-extrabold text-ink-800">Acesse sua conta</h1>
+                    <p class="mt-2 text-ink-700">Entre com seus dados para continuar.</p>
+
+                    <form class="auth-form mt-8 space-y-5" data-auth="login" action="#" method="post" novalidate>
+                        <div>
+                            <label for="usuario" class="mb-1.5 block text-sm font-semibold text-ink-800">Usuário</label>
+                            <input type="text" id="usuario" name="usuario" required autocomplete="username" class="field">
+                            <p class="field-error hidden" id="usuario-erro" role="alert"></p>
+                        </div>
+                        <div>
+                            <label for="senha" class="mb-1.5 block text-sm font-semibold text-ink-800">Senha</label>
+                            <div class="relative">
+                                <input type="password" id="senha" name="senha" required autocomplete="current-password" class="field pr-20">
+                                <button type="button" class="toggle-pass absolute right-2 top-1/2 -translate-y-1/2 rounded-lg px-3 py-1.5 text-sm font-semibold text-ink-700 hover:bg-ink-800/10" data-target="senha" aria-label="Mostrar senha" aria-pressed="false">Mostrar</button>
+                            </div>
+                            <p class="field-error hidden" id="senha-erro" role="alert"></p>
+                        </div>
+                        <button type="submit" class="w-full rounded-full bg-ink-800 py-3.5 font-bold text-sand-100 transition-colors hover:bg-ink-600">Entrar</button>
+                        <div class="form-status hidden rounded-xl border border-ink-800/20 bg-sand-50 p-4 text-sm text-ink-800" role="status" aria-live="polite"></div>
+                        <p class="text-center text-ink-700">Não tem uma conta? <a href="cadastro.html" class="font-bold text-ink-800 underline underline-offset-4">Criar conta</a></p>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
